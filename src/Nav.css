@@ -1,6 +1,33 @@
 .navbar{
     display: flex;
     align-items: center;
+  
+   
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+
+    
+    
+     position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+.options{
+ 
+    z-index: 8;
+   
+    
+    background-color: white;
+    width: 100%;
+   
+ 
+  z-index: 9;
+  background: #fff;
+
 }
 
  img{
@@ -51,14 +78,25 @@ ul .breaker{
   position: relative;
   top:-18px;
   right: 25px;
+  z-index: 3;
 
 }
 
 .imagebarq img {
   width: 100%;               
   height: auto;
+  display: block;
         
 }
+.quot{
+    position: absolute;
+    z-index: 3;
+    top: 50;
+    left: 50;
+    
+    
+}
+
 .specials{
     display: flex;
     width: 100%;
@@ -95,5 +133,22 @@ ul .breaker{
     background-color: #c4a3ae;
 }
 
+.mage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.mage img {
+    height: 135px;
+    width: 135px;
+    justify-content: center;
+    align-items: center;
+}
 
+.diwali img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: 8px;
+}

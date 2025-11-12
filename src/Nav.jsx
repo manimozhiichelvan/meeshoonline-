@@ -2,7 +2,7 @@ import React from 'react'
 import './Nav.css'
 
 export default function Nav() {
-  const image=[] ;
+  const images=["https://images.meesho.com/images/marketing/1744634654837.webp","https://images.meesho.com/images/marketing/1744634725496.webp","https://images.meesho.com/images/marketing/1744634780426.webp","https://images.meesho.com/images/marketing/1744634814643.webp","https://images.meesho.com/images/marketing/1744634835018.webp","https://images.meesho.com/images/marketing/1744634871107.webp","https://images.meesho.com/images/marketing/1744634909968.webp","https://images.meesho.com/images/marketing/1744634937295.webp"] ;
   const options=["Popolar","Kurti,Sarees and Lehangas","Women Western","lingerie","Men","Kids and Toys","Home & Kitchen","Beauty & health","Bags and Footwares","Electronics","Watches","Sports and Fitness"];
   const mapoptions=options.map((option,index)=>
         
@@ -44,7 +44,9 @@ export default function Nav() {
 
       <div className='imagebarq'>
          <img src="https://images.meesho.com/images/marketing/1760553615790.webp" alt="messho" />
+         
       </div>
+      
       <div className='specials'>
        
           <div className='lightpink'>
@@ -57,9 +59,13 @@ export default function Nav() {
             </ul>
           </div>
       </div>
-      <div className='dressimage'>
-          <img src="https://images.meesho.com/images/marketing/1744634654837.webp" alt="meesho" />
+      <div className='mage'>
+          {images.map((mage,index)=> <img key={index} src={mage} alt="meshoo" /> )}
+      </div>
+      <div className='diwali'>
+        <img src="https://images.meesho.com/images/marketing/1744698265981.webp" alt="diwali" />
       </div>
     </div>
+    
   )
 }
