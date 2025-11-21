@@ -1,7 +1,9 @@
 import React from 'react'
 import './Nav.css'
-import { useState,useRef,useMemo} from 'react';
+import { useState,useRef,useMemo,usenavigate} from 'react';
 import Hover from './hover';
+import { Link } from 'react-router-dom';
+
 
 export default function Nav() {
   const images=["https://images.meesho.com/images/marketing/1744634654837.webp","https://images.meesho.com/images/marketing/1744634725496.webp","https://images.meesho.com/images/marketing/1744634780426.webp","https://images.meesho.com/images/marketing/1744634814643.webp","https://images.meesho.com/images/marketing/1744634835018.webp","https://images.meesho.com/images/marketing/1744634871107.webp","https://images.meesho.com/images/marketing/1744634909968.webp","https://images.meesho.com/images/marketing/1744634937295.webp"] ;
@@ -115,7 +117,7 @@ return (
     <div>
       <div className='navbar'>
         <img src="https://www.meesho.com/assets/svgicons/meeshoLogo.svg" alt="meesho" />
-        <input type="text" placeholder='🔍 Try Sarees,Kurti or Search by Product Code'/>
+        <input type="text" placeholder='🔍 Try Sarees,Kurti or Search by Product Code' onClick={()=>navigate("/search")} />
 
         <ul>
           <li>Become a Supplier</li><hr />
@@ -124,7 +126,8 @@ return (
           <li className='breaker'></li>
           <li className="profile">
     <i className="fa-regular fa-user"></i>
-    <span>Profile</span>
+    <span><Link to="/login" style={{ textDecoration: "none",  color: 'black'}}>Profile</Link></span>
+
   </li>
   <li className="cart">
     <i className="fa-solid fa-cart-shopping"></i>

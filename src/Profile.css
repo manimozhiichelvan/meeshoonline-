@@ -1,0 +1,73 @@
+/* CLEAN AND SIMPLE CENTERED LOGIN WITH IMAGE ON TOP */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* stack image on top */
+  align-items: center;
+  justify-content: center;
+  background: white
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 20px; /* spacing between image and box */
+}
+
+img {
+  width: 180px; /* adjust size */
+  height: auto;
+  margin: 0;
+}
+
+.login-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  position: relative;
+  left: -45px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #c41fa8;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.but{
+    border-radius: 12px;
+    height: 40px;
+    width: 80px;
+    background-color: #c41fa8;
+    border-color: #c41fa8;
+    color:white;
+
+}
+
