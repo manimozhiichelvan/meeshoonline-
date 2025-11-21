@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 export default function Login() {
   const [mobile, setMobile] = useState("");
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = () => {
     if (mobile.length !== 10) {
       alert("Enter a valid 10-digit mobile number.");
       return;
@@ -30,13 +29,13 @@ export default function Login() {
             className="input"
             placeholder="Enter mobile number"
             value={mobile}
-            onChange={(e) => setMobile(e.target.value.replace(/[^0-9]/g, ""))}
+            onChange={(e) => setMobile(e.target.value )}
             maxLength={10}
             required
           />
 
           <button type="submit" className="btn" disabled={mobile.length !== 10}>
-            Login
+            Login                                                                                                                                                                                                                                                                                                   
           </button>
         </form>
       </div>

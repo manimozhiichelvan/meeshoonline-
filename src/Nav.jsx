@@ -19,64 +19,42 @@ export default function Nav() {
 const anime=["https://images.meesho.com/images/marketing/1743159302944.webp","https://images.meesho.com/images/marketing/1743159393231.webp","https://images.meesho.com/images/marketing/1744636599446.webp","https://images.meesho.com/images/marketing/1743159377598.webp","https://images.meesho.com/images/marketing/1743159322237.webp","https://images.meesho.com/images/marketing/1743159302944.webp","https://images.meesho.com/images/marketing/1743159302944.webp","https://images.meesho.com/images/marketing/1743159302944.webp"]
   const SAMPLE_PRODUCTS = [
   {
-    id: 1,
-    title: "Poco C71 Cases & Covers",
-    price: 134,
-    mrp: 199,
-    img: "https://images.meesho.com/images/products/584578661/0lybn_512.avif?width=360",
-    category: "Phone Accessories",
-    rating: 3.9,
-    reviews: 116,
+    id: 1,title: "Poco C71 Cases & Covers", price: 134,img: "https://images.meesho.com/images/products/584578661/0lybn_512.avif?width=360",rating: 3.9,
   },
   {
     id: 2,
     title: "Trendy Retro Men Shirts",
     price: 194,
-    mrp: 222,
     img: "https://images.meesho.com/images/products/375061729/0lurd_512.avif?width=360",
-    category: "Men",
     rating: 4.0,
-    reviews: 73902,
   },
   {
     id: 3,
     title: "Bluetooth Headphones & Earphones",
     price: 269,
-    mrp: 289,
     img: "https://images.meesho.com/images/products/417056622/gshhe_512.avif?width=360",
-    category: "Electronics",
     rating: 3.9,
-    reviews: 25832,
   },
   {
     id: 4,
     title: "Ikat Net Embroidered Saree",
     price: 335,
-    mrp: 335,
     img: "https://images.meesho.com/images/products/68464151/f1nit_512.avif?width=360",
-    category: "Women",
     rating: 3.8,
-    reviews: 60384,
   },
   {
     id: 5,
     title: "Phone Wallet - Blue",
     price: 249,
-    mrp: 299,
     img: "https://images.meesho.com/images/products/495626488/dwbsp_512.avif?width=360",
-    category: "Phone Accessories",
     rating: 4.1,
-    reviews: 2200,
   },
   {
     id: 6,
     title: "Kids Hoodie Set",
     price: 299,
-    mrp: 349,
-    img: "hthttps://images.meesho.com/images/products/434114444/tvbku_512.avif?width=360",
-    category: "Kids",
+    img: "https://images.meesho.com/images/products/434114444/tvbku_512.avif?width=360",
     rating: 4.2,
-    reviews: 4200,
   },
 
 ];
@@ -98,20 +76,7 @@ const ALL_CATEGORIES = [
     );
   };
 
-  const filtered = useMemo(() => {
-    let list = SAMPLE_PRODUCTS.slice();
-
-   
-    if (selectedCats.length > 0) {
-      list = list.filter((p) => selectedCats.includes(p.category));
-    }
-
-    
-  
-
-    return list;
-  }, [sortBy, selectedCats]);
-
+  const filtered = SAMPLE_PRODUCTS;
 
 return (
     <div>
@@ -199,14 +164,6 @@ return (
        <div className="products-page">
       <div className="page-header">
         <h2>Products For You</h2>
-        <div className="sort-box">
-          <label>Sort by:</label>
-          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-            <option value="relevance">Relevance</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-            <option value="rating">Top Rated</option>
-          </select>
         </div>
       </div>
 
@@ -246,7 +203,7 @@ return (
             <article className="product-card" key={p.id}>
               <div className="card-image">
                 <img src={p.img} alt={p.title} />
-                <div className="more-badge">+{Math.max(0, 1)}</div>
+               
               </div>
 
               <div className="card-body">
@@ -256,10 +213,8 @@ return (
                   <div className="price">₹{p.price}</div>
                   {p.mrp > p.price && (
                     <>
-                      <div className="mrp">₹{p.mrp}</div>
-                      <div className="discount">
-               
-                      </div>
+                     
+                     
                     </>
                   )}
                 </div>
@@ -267,7 +222,7 @@ return (
 
                 <div className="rating">
                   <span className="rate-pill">{p.rating.toFixed(1)} </span>
-                  <span className="reviews">{p.reviews} Reviews</span>
+                  
                 </div>
               </div>
             </article>
@@ -275,13 +230,5 @@ return (
         </main>
       </div>
     </div>
-    
-  
-
-
-
-      
-    </div>
-    
   )
 }
